@@ -1,13 +1,16 @@
 import os
 import re
+
 import setuptools
 
 NAME = "py-py-kick"
 DESCRIPTION = "py-py-kick: Advanced python library for py-py-kick"
 
+
 def get_requirements(req_path: str):
     with open(req_path, encoding='utf8') as f:
         return f.read().splitlines()
+
 
 INSTALL_REQUIRES = get_requirements("requirements.txt")
 
