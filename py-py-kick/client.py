@@ -1,13 +1,13 @@
 import asyncio
 import json
-import logging
 from typing import Any, Awaitable, Callable, Dict, Optional
 
 import requests
 import websockets
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
-logger = logging.getLogger(__name__)
+from .logging import get_logger
+
+logger = get_logger(__name__)
 
 
 class KickAPIError(Exception):
